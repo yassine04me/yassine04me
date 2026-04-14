@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yassine MENAD — Technicien Informatique & Étudiant BTS SIO SISR</title>
+  <meta name="description" content="Portfolio de Yassine MENAD — Technicien Informatique passionné par l'infrastructure, en recherche d'alternance BTS SIO SISR à Metz." />
+  <meta name="keywords" content="Yassine MENAD, portfolio, technicien informatique, BTS SIO, SISR, alternance, Metz, infrastructure, réseaux" />
+  <meta name="author" content="Yassine MENAD" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ══════════ PARTICLE CANVAS ══════════ -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span><span class="logo-name">YM</span><span class="logo-bracket"> /&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#hero" class="nav-link active" data-section="hero">Accueil</a></li>
+      <li><a href="#about" class="nav-link" data-section="about">Profil</a></li>
+      <li><a href="#skills" class="nav-link" data-section="skills">Compétences</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projets</a></li>
+      <li><a href="#experience" class="nav-link" data-section="experience">Expérience</a></li>
+      <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+      <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      <li><a href="#veille" class="nav-link" data-section="veille">Veille</a></li>
+    </ul>
+    <button id="nav-toggle" class="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ══════════ HERO / TERMINAL ══════════ -->
+  <section id="hero" class="hero-section">
+    <div class="terminal-window">
+      <div class="terminal-header">
+        <div class="terminal-dots">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+        </div>
+        <span class="terminal-title">yassine@portfolio:~</span>
+      </div>
+      <div class="terminal-body" id="terminal-body">
+        <div class="terminal-line">
+          <span class="prompt">yassine@portfolio:~$</span>
+          <span class="command" id="cmd-whoami"></span><span class="cursor" id="cursor-1">█</span>
+        </div>
+        <div class="terminal-output" id="output-area"></div>
+      </div>
+    </div>
+    <a id="btn-download-cv" href="CV_Yassine_Menad.pdf" download class="btn-cv-download">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+      <span>Télécharger mon CV</span>
+    </a>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ══════════ ABOUT ══════════ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-accent">//</span> Profil</h2>
+      <div class="about-grid">
+        <div class="about-card glass-card fade-in">
+          <div class="about-avatar">
+            <div class="avatar-ring"></div>
+            <div class="avatar-initials">YM</div>
+          </div>
+          <h3>Yassine MENAD</h3>
+          <p class="about-role">Technicien Informatique<br />&amp; Étudiant en BTS SIO option SISR</p>
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            Recherche active d'alternance
+          </div>
+          <div class="otw-badge" aria-label="Disponible immédiatement">
+            <span class="otw-dot"></span>
+            <span>Open to Work</span>
+          </div>
+          <p class="about-availability">Disponible immédiatement — rythme très avantageux de <strong>4 jours/semaine en entreprise</strong>.</p>
+        </div>
+        <div class="about-card glass-card about-description fade-in">
+
+          <!-- Paragraphes biographiques -->
+          <div class="about-bio">
+            <p>Passionné par l'infrastructure informatique, je suis actuellement en <strong>BTS SIO option SISR</strong>. Curieux et motivé, je possède de solides bases en systèmes et réseaux que j'ai hâte de mettre en pratique dans un environnement professionnel exigeant.</p>
+            <p>Au-delà de la technique, je suis profondément engagé dans le milieu associatif. En tant que <strong>Référent Humanitaire</strong> et <strong>Membre du Conseil d'Administration (CA)</strong> de l'association WYP, je coordonne des équipes, gère des projets d'envergure et participe aux décisions stratégiques. Cette double casquette me permet d'allier rigueur technique et fortes compétences humaines.</p>
+          </div>
+
+          <!-- Soft Skills -->
+          <div class="about-soft-skills">
+            <p class="soft-skills-label"><span class="soft-label-prompt">&gt;_</span> Soft_Skills</p>
+            <div class="soft-tags">
+              <span class="soft-tag">Gestion de projet</span>
+              <span class="soft-tag">Leadership</span>
+              <span class="soft-tag">Esprit d'équipe</span>
+              <span class="soft-tag">Prise d'initiative</span>
+              <span class="soft-tag">Adaptabilité</span>
+            </div>
+          </div>
+
+          <!-- Infos de contact rapides -->
+          <div class="about-details">
+            <div class="detail-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Metz, France</span>
+            </div>
+            <div class="detail-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              <span>BTS SIO — SISR</span>
+            </div>
+            <div class="detail-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>06 56 86 53 45</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ SKILLS ══════════ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-accent">//</span> Compétences</h2>
+      <div class="skills-grid">
+
+        <!-- Systèmes -->
+        <div class="skill-card glass-card fade-in" id="skill-systems">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Systèmes</h3>
+          <p class="skill-desc">Déploiement, configuration et maintenance d’environnements physiques et virtuels. Administration Active Directory.</p>
+          <div class="skill-tags">
+            <span class="tag"><i class="devicon-linux-plain"></i>Linux</span>
+            <span class="tag"><i class="devicon-windows8-original"></i>Windows</span>
+          </div>
+        </div>
+
+        <!-- Réseaux -->
+        <div class="skill-card glass-card fade-in" id="skill-networks">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Réseaux</h3>
+          <p class="skill-desc">Conception d’architectures LAN/VLAN et configuration d’équipements de routage et de sécurité.</p>
+          <div class="skill-tags">
+            <span class="tag">Switch</span>
+            <span class="tag">Routeur</span>
+            <span class="tag">Firewall</span>
+            <span class="tag">LAN</span>
+            <span class="tag">VLAN</span>
+          </div>
+        </div>
+
+        <!-- Développement -->
+        <div class="skill-card glass-card fade-in" id="skill-dev">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
+          </div>
+          <h3>Développement</h3>
+          <p class="skill-desc">Création d’applications, requêtage de bases de données et conception d’interfaces web.</p>
+          <div class="skill-tags">
+            <span class="tag"><i class="devicon-c-plain"></i>C</span>
+            <span class="tag"><i class="devicon-cplusplus-plain"></i>C++</span>
+            <span class="tag"><i class="devicon-html5-plain"></i>HTML</span>
+            <span class="tag"><i class="devicon-css3-plain"></i>CSS</span>
+            <span class="tag"><i class="devicon-mysql-plain"></i>SQL</span>
+          </div>
+        </div>
+
+        <!-- Outils -->
+        <div class="skill-card glass-card fade-in" id="skill-tools">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3>Outils</h3>
+          <p class="skill-desc">Maîtrise des outils de versioning, de collaboration et de déploiement continu.</p>
+          <div class="skill-tags">
+            <span class="tag"><i class="devicon-git-plain"></i>Git</span>
+            <span class="tag"><i class="devicon-gitlab-plain"></i>GitLab</span>
+            <span class="tag"><i class="devicon-github-original"></i>GitHub</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ══════════ TECHNOLOGIES & OUTILS ══════════ -->
+  <section id="technologies" class="section technologies-section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-accent">//</span> Technologies &amp; Outils</h2>
+
+      <!-- Filter bar -->
+      <div class="tech-filters" role="tablist" aria-label="Filtres par catégorie">
+        <button class="tech-filter-btn active" data-filter="all"    role="tab" aria-selected="true">Tous</button>
+        <button class="tech-filter-btn"         data-filter="sys"   role="tab" aria-selected="false">Systèmes</button>
+        <button class="tech-filter-btn"         data-filter="net"   role="tab" aria-selected="false">Réseaux</button>
+        <button class="tech-filter-btn"         data-filter="tools" role="tab" aria-selected="false">Outils &amp; Sécu</button>
+      </div>
+
+      <!-- Tech grid -->
+      <div class="tech-grid" id="tech-grid">
+
+        <!-- ── SYSTÈMES ── -->
+
+        <!-- Windows Server -->
+        <div class="tech-card glass-card fade-in" data-category="sys">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--green">
+            <i class="devicon-windows8-original"></i>
+          </div>
+          <p class="tech-name">Windows Server</p>
+          <span class="tech-cat-pill tech-pill--sys">Systèmes</span>
+        </div>
+
+        <!-- Linux -->
+        <div class="tech-card glass-card fade-in" data-category="sys">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--green">
+            <i class="devicon-linux-plain"></i>
+          </div>
+          <p class="tech-name">Linux</p>
+          <span class="tech-cat-pill tech-pill--sys">Systèmes</span>
+        </div>
+
+        <!-- VMware -->
+        <div class="tech-card glass-card fade-in" data-category="sys">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--green">
+            <!-- VMware SVG minimaliste -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="5" width="20" height="14" rx="2"/>
+              <circle cx="8"  cy="12" r="2" fill="currentColor" stroke="none"/>
+              <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
+              <circle cx="16" cy="12" r="2" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <p class="tech-name">VMware</p>
+          <span class="tech-cat-pill tech-pill--sys">Systèmes</span>
+        </div>
+
+        <!-- Bash / PowerShell -->
+        <div class="tech-card glass-card fade-in" data-category="sys">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--green">
+            <i class="devicon-bash-plain"></i>
+          </div>
+          <p class="tech-name">Bash / PowerShell</p>
+          <span class="tech-cat-pill tech-pill--sys">Systèmes</span>
+        </div>
+
+        <!-- ── RÉSEAUX ── -->
+
+        <!-- Cisco -->
+        <div class="tech-card glass-card fade-in" data-category="net">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--blue">
+            <!-- Cisco: réseau/switch SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="2" y="9" width="20" height="6" rx="1.5"/>
+              <circle cx="6"  cy="12" r="1" fill="currentColor" stroke="none"/>
+              <circle cx="10" cy="12" r="1" fill="currentColor" stroke="none"/>
+              <circle cx="14" cy="12" r="1" fill="currentColor" stroke="none"/>
+              <circle cx="18" cy="12" r="1" fill="currentColor" stroke="none"/>
+              <path d="M6 9V6M12 9V6M18 9V6M6 15v3M12 15v3M18 15v3"/>
+            </svg>
+          </div>
+          <p class="tech-name">Cisco</p>
+          <span class="tech-cat-pill tech-pill--net">Réseaux</span>
+        </div>
+
+        <!-- Fortinet -->
+        <div class="tech-card glass-card fade-in" data-category="net">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--blue">
+            <!-- Fortinet: bouclier SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.35C16.5 22.15 20 17.25 20 12V6L12 2z"/>
+              <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p class="tech-name">Fortinet</p>
+          <span class="tech-cat-pill tech-pill--net">Réseaux</span>
+        </div>
+
+        <!-- Wireshark -->
+        <div class="tech-card glass-card fade-in" data-category="net">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--blue">
+            <!-- Wireshark: analyse réseau SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <polyline points="2 12 5 7 8 14 11 9 14 15 17 6 20 12 22 12"/>
+            </svg>
+          </div>
+          <p class="tech-name">Wireshark</p>
+          <span class="tech-cat-pill tech-pill--net">Réseaux</span>
+        </div>
+
+        <!-- pfSense -->
+        <div class="tech-card glass-card fade-in" data-category="net">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--blue">
+            <!-- pfSense: pare-feu/firewall SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              <line x1="2" y1="12" x2="22" y2="12" opacity="0.3"/>
+            </svg>
+          </div>
+          <p class="tech-name">pfSense</p>
+          <span class="tech-cat-pill tech-pill--net">Réseaux</span>
+        </div>
+
+        <!-- ── OUTILS & SÉCURITÉ ── -->
+
+        <!-- GLPI -->
+        <div class="tech-card glass-card fade-in" data-category="tools">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--purple">
+            <!-- GLPI: helpdesk / ticket SVG -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M8 10h8M8 14h5"/>
+              <circle cx="19" cy="5" r="3" fill="currentColor" stroke="none" class="tech-notif-dot"/>
+            </svg>
+          </div>
+          <p class="tech-name">GLPI</p>
+          <span class="tech-cat-pill tech-pill--tools">Outils</span>
+        </div>
+
+        <!-- Git / GitHub -->
+        <div class="tech-card glass-card fade-in" data-category="tools">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--purple">
+            <i class="devicon-github-original"></i>
+          </div>
+          <p class="tech-name">Git / GitHub</p>
+          <span class="tech-cat-pill tech-pill--tools">Outils</span>
+        </div>
+
+        <!-- MySQL -->
+        <div class="tech-card glass-card fade-in" data-category="tools">
+          <div class="tech-card-glow"></div>
+          <div class="tech-logo tech-logo--purple">
+            <i class="devicon-mysql-plain"></i>
+          </div>
+          <p class="tech-name">MySQL</p>
+          <span class="tech-cat-pill tech-pill--tools">Outils</span>
+        </div>
+
+      </div><!-- /tech-grid -->
+    </div>
+  </section>
+
+  <!-- ══════════ PROJECTS ══════════ -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-accent">//</span> Projets</h2>
+      <div class="bento-grid">
+        <!-- Project 1 — Saturne -->
+        <div class="bento-card glass-card tilt-card fade-in" id="project-saturne">
+          <div class="bento-card-glow"></div>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(-30 12 12)"/></svg>
+          </div>
+          <span class="project-lang">C++</span>
+          <h3>Génération d'image de Saturne</h3>
+          <p>Création d'une image bitmap en manipulant les pixels au format RGBA. Rendu procédural de la planète et de ses anneaux.</p>
+          <div class="project-tags">
+            <span class="tag-mini">Bitmap</span>
+            <span class="tag-mini">RGBA</span>
+            <span class="tag-mini">Graphique</span>
+          </div>
+        </div>
+
+        <!-- Project 2 — Graphes -->
+        <div class="bento-card glass-card tilt-card fade-in" id="project-graphes">
+          <div class="bento-card-glow"></div>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="18" r="3"/><line x1="8.5" y1="7.5" x2="15.5" y2="16.5"/><line x1="8.5" y1="16.5" x2="15.5" y2="7.5"/><line x1="6" y1="9" x2="6" y2="15"/><line x1="18" y1="9" x2="18" y2="15"/></svg>
+          </div>
+          <span class="project-lang">C</span>
+          <h3>Gestion de graphes</h3>
+          <p>Développement d'un programme avec gestion des dépendances et tri topologique pour résoudre l'ordonnancement de tâches.</p>
+          <div class="project-tags">
+            <span class="tag-mini">Algorithmes</span>
+            <span class="tag-mini">Structures</span>
+          </div>
+        </div>
+
+        <!-- Project 3 — Yams -->
+        <div class="bento-card glass-card tilt-card fade-in" id="project-yams">
+          <div class="bento-card-glow"></div>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.2" fill="currentColor"/><circle cx="16" cy="8" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/><circle cx="8" cy="16" r="1.2" fill="currentColor"/><circle cx="16" cy="16" r="1.2" fill="currentColor"/></svg>
+          </div>
+          <span class="project-lang">C</span>
+          <h3>Jeu de Yams</h3>
+          <p>Développement complet d'un jeu en console avec gestion des lancers de dés, des combinaisons et du système de score.</p>
+          <div class="project-tags">
+            <span class="tag-mini">Jeu</span>
+            <span class="tag-mini">Console</span>
+            <span class="tag-mini">Logique</span>
+          </div>
+        </div>
+
+        <!-- Project 4 — BDD -->
+        <div class="bento-card glass-card tilt-card fade-in" id="project-bdd">
+          <div class="bento-card-glow"></div>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4.03 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <span class="project-lang">MySQL</span>
+          <h3>Base de données Bibliothèque</h3>
+          <p>Modélisation complète (MCD/MLD) et gestion des emprunts, retours et catalogue d'ouvrages.</p>
+          <div class="project-tags">
+            <span class="tag-mini">MCD</span>
+            <span class="tag-mini">MLD</span>
+            <span class="tag-mini">SQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ EXPERIENCE ══════════ -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-accent">//</span> Expérience</h2>
+      <div class="timeline">
+        <div class="timeline-item glass-card fade-in" id="exp-wyp">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Janvier 2025 — Juin 2025</div>
+          <h3>Technicien Informatique — WYP, Metz</h3>
+          <ul class="timeline-tasks">
+            <li>Préparation et déploiement de 20 postes sous Windows 11</li>
+            <li>Assistance utilisateurs niveau 1 et 2 (diagnostic, résolution)</li>
+            <li>Création de procédures d'installation standardisées</li>
+          </ul>
+        </div>
+        <div class="timeline-item glass-card fade-in" id="exp-other">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Expériences complémentaires</div>
+          <h3>Polyvalence & travail d'équipe</h3>
+          <p>Mes expériences au <strong>FC Metz</strong>, <strong>Quick</strong> et <strong>Auchan</strong> m'ont permis de développer une grande polyvalence, un sens du service client et une capacité d'adaptation à des environnements variés et exigeants.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ INTERESTS ══════════ -->
+  <section id="interests" class="section interests-section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-accent">//</span> Centres d'intérêt</h2>
+      <div class="interests-grid">
+        <div class="interest-card glass-card fade-in" id="interest-bjj">
+          <div class="interest-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM6 15l4-4 3 3 5-5"/><path d="M15 12v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+          </div>
+          <h3>Jiu-jitsu brésilien</h3>
+          <p>Discipline, persévérance et stratégie — des qualités que j'applique aussi en informatique.</p>
+        </div>
+        <div class="interest-card glass-card fade-in" id="interest-music">
+          <div class="interest-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <h3>Composition musicale & Mixage</h3>
+          <p>Création et mixage audio via plugins professionnels — Autotune, Valhalla, Waves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CERTIFICATIONS & CRÉDIBILITÉ ══════════ -->
+  <section id="certifications" class="section certifications-section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-accent">//</span> Certifications &amp; Crédibilité</h2>
+
+      <!-- Certification Cards -->
+      <div class="cert-grid">
+
+        <!-- Fortinet NSE 1 -->
+        <div class="cert-card glass-card fade-in" id="cert-nse1">
+          <div class="cert-badge cert-badge--inprogress">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-header">
+              <span class="cert-issuer">Fortinet</span>
+              <span class="cert-status cert-status--progress">En cours</span>
+            </div>
+            <h3 class="cert-name">NSE 1 — Network Security Associate</h3>
+            <p class="cert-desc">Introduction aux fondamentaux de la cybersécurité et au paysage des menaces modernes.</p>
+            <div class="cert-skills">
+              <span class="tag-mini">Cybersécurité</span>
+              <span class="tag-mini">Threat Intelligence</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fortinet NSE 2 -->
+        <div class="cert-card glass-card fade-in" id="cert-nse2">
+          <div class="cert-badge cert-badge--inprogress">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-header">
+              <span class="cert-issuer">Fortinet</span>
+              <span class="cert-status cert-status--progress">En cours</span>
+            </div>
+            <h3 class="cert-name">NSE 2 — Network Security Associate</h3>
+            <p class="cert-desc">Panorama des solutions de sécurité réseau et maîtrise des outils FortiGate.</p>
+            <div class="cert-skills">
+              <span class="tag-mini">FortiGate</span>
+              <span class="tag-mini">Firewall</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fortinet NSE 3 -->
+        <div class="cert-card glass-card fade-in" id="cert-nse3">
+          <div class="cert-badge cert-badge--inprogress">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-header">
+              <span class="cert-issuer">Fortinet</span>
+              <span class="cert-status cert-status--progress">En cours</span>
+            </div>
+            <h3 class="cert-name">NSE 3 — Network Security Associate</h3>
+            <p class="cert-desc">Architecture de sécurité Fortinet et déploiement de solutions avancées.</p>
+            <div class="cert-skills">
+              <span class="tag-mini">Architecture</span>
+              <span class="tag-mini">Fortinet Fabric</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cisco Networking Basics -->
+        <div class="cert-card glass-card fade-in" id="cert-cisco">
+          <div class="cert-badge cert-badge--inprogress cert-badge--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-header">
+              <span class="cert-issuer">Cisco</span>
+              <span class="cert-status cert-status--progress">En cours</span>
+            </div>
+            <h3 class="cert-name">Networking Basics</h3>
+            <p class="cert-desc">Consolidation des fondamentaux réseaux : topologies, protocoles TCP/IP, commutation.</p>
+            <div class="cert-skills">
+              <span class="tag-mini">TCP/IP</span>
+              <span class="tag-mini">Switching</span>
+              <span class="tag-mini">Routing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PSC1 -->
+        <div class="cert-card glass-card fade-in" id="cert-psc1">
+          <div class="cert-badge cert-badge--obtained">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div class="cert-body">
+            <div class="cert-header">
+              <span class="cert-issuer">Sécurité Civile</span>
+              <span class="cert-status cert-status--obtained">Obtenu</span>
+            </div>
+            <h3 class="cert-name">PSC1 — Premiers Secours</h3>
+            <p class="cert-desc">Gestes de premiers secours, réactivité sous pression et gestion de situations d'urgence.</p>
+            <div class="cert-skills">
+              <span class="tag-mini">Réactivité</span>
+              <span class="tag-mini">Gestion d'urgence</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Points Forts -->
+      <h2 class="section-title" style="margin-top:4.5rem;"><span class="title-accent">//</span> Pourquoi me choisir ?</h2>
+      <div class="strengths-grid">
+
+        <div class="strength-card glass-card fade-in" id="strength-rythme">
+          <div class="strength-icon strength-icon--green">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="strength-body">
+            <div class="strength-kpi">4 j/sem</div>
+            <h3>Rythme Alternance Premium</h3>
+            <p>4 jours en entreprise dès le premier jour — un avantage opérationnel immédiat et rare en BTS SIO.</p>
+          </div>
+        </div>
+
+        <div class="strength-card glass-card fade-in" id="strength-impact">
+          <div class="strength-icon strength-icon--blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M7 8h2v2H7zM11 8h2v2h-2zM15 8h2v2h-2z"/></svg>
+          </div>
+          <div class="strength-body">
+            <div class="strength-kpi">20 postes</div>
+            <h3>Impact Prouvé en Stage</h3>
+            <p>Déploiement autonome de 20 postes Windows 11 chez WYP + support utilisateurs N1/N2 sans supervision.</p>
+          </div>
+        </div>
+
+        <div class="strength-card glass-card fade-in" id="strength-leadership">
+          <div class="strength-icon strength-icon--purple">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="strength-body">
+            <div class="strength-kpi">Référent</div>
+            <h3>Engagement &amp; Leadership</h3>
+            <p>Référent Humanitaire chez WYP — coordination d'équipe, gestion de projet et sens des responsabilités.</p>
+          </div>
+        </div>
+
+        <div class="strength-card glass-card fade-in" id="strength-polyvalence">
+          <div class="strength-icon strength-icon--orange">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="strength-body">
+            <div class="strength-kpi">FC Metz · Amazon</div>
+            <h3>Polyvalence &amp; Pression</h3>
+            <p>Expériences au FC Metz et chez Amazon — travail sous haute pression, sens du service et adaptabilité prouvés.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title"><span class="title-accent">//</span> Contact</h2>
+      <p class="contact-intro">Intéressé par mon profil ? N'hésitez pas à me contacter.</p>
+      <div class="contact-grid">
+        <a href="mailto:yassinemenad04@gmail.com" class="contact-card glass-card fade-in" id="contact-email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+          <span>yassinemenad04@gmail.com</span>
+        </a>
+        <a href="tel:+33656865345" class="contact-card glass-card fade-in" id="contact-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>06 56 86 53 45</span>
+        </a>
+        <a href="https://www.linkedin.com/in/yassine-menad" target="_blank" rel="noopener noreferrer" class="contact-card glass-card fade-in" id="contact-linkedin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          <span>Yassine Menad</span>
+        </a>
+        <a href="#hero" class="contact-card glass-card fade-in" id="contact-location">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Metz, France</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ VEILLE TECHNOLOGIQUE ══════════ -->
+  <section id="veille" class="section veille-section">
+    <div class="container">
+
+      <!-- Titre avec icône feuille SVG -->
+      <h2 class="section-title">
+        <span class="title-accent">//</span>
+        Veille Technologique
+        <span class="veille-leaf" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M2 22s4-2 6-6c1.5-3 1-7 4-10 2-2 5-3 10-4-1 5-2 8-4 10-3 3-7 2.5-10 4C5.5 18 2 22 2 22z"/>
+            <path d="M12 12 2 22"/>
+          </svg>
+        </span>
+      </h2>
+
+      <!-- Terminal container -->
+      <div class="veille-terminal glass-card">
+
+        <!-- Terminal header bar -->
+        <div class="veille-term-header">
+          <div class="terminal-dots">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <span class="veille-term-title">watch --interval=1 green-it-feed.sh</span>
+          <span class="veille-live-badge"><span class="veille-live-dot"></span>LIVE</span>
+        </div>
+
+        <!-- Body -->
+        <div class="veille-term-body">
+
+          <!-- Introduction -->
+          <div class="veille-intro-block">
+            <span class="veille-comment"># ─────────────────────────────────────────────────────</span>
+            <span class="veille-comment">#  Sujet d'étude : Le Numérique Responsable (Green IT)</span>
+            <span class="veille-comment"># ─────────────────────────────────────────────────────</span>
+            <span class="veille-intro-text">Comment allier <span class="veille-hl-green">optimisation des infrastructures systèmes (SISR)</span> et impact sociétal à travers le <span class="veille-hl-blue">réemploi</span> et l'<span class="veille-hl-blue">IT frugal</span>.</span>
+          </div>
+
+          <!-- Sources de collecte -->
+          <div class="veille-sources-block">
+            <span class="veille-prompt">yassine@veille:~$</span>
+            <span class="veille-cmd">cat sources.conf</span>
+            <div class="veille-source-tags">
+              <span class="veille-src-tag">ADEME</span>
+              <span class="veille-src-tag">GreenIT.fr</span>
+              <span class="veille-src-tag">Tech For Good</span>
+              <span class="veille-src-tag">Institut du Numérique Responsable</span>
+              <span class="veille-src-tag">WYP Actions</span>
+            </div>
+          </div>
+
+          <!-- Séparateur -->
+          <div class="veille-separator">
+            <span class="veille-prompt">yassine@veille:~$</span>
+            <span class="veille-cmd">tail -f articles.log</span>
+          </div>
+
+          <!-- Log Article 1 -->
+          <div class="veille-log-entry veille-log--green fade-in">
+            <div class="veille-log-meta">
+              <span class="veille-log-date">2025-03-14 09:12:07</span>
+              <span class="veille-log-tag veille-tag--cycle">CYCLE-DE-VIE</span>
+            </div>
+            <div class="veille-log-content">
+              <p class="veille-log-title">Stratégies de réemploi</p>
+              <p class="veille-log-desc">Comment le reconditionnement des baies serveurs et postes clients finance le secteur associatif. Analyse des filières de valorisation matérielle en structures IT.</p>
+            </div>
+            <div class="veille-log-relevance">
+              <span class="veille-relevance-bar"></span>
+              <span class="veille-relevance-label">Pertinence : Très élevée</span>
+            </div>
+          </div>
+
+          <!-- Log Article 2 -->
+          <div class="veille-log-entry veille-log--blue fade-in">
+            <div class="veille-log-meta">
+              <span class="veille-log-date">2025-02-28 14:45:33</span>
+              <span class="veille-log-tag veille-tag--infra">INFRA-GREEN</span>
+            </div>
+            <div class="veille-log-content">
+              <p class="veille-log-title">Datacenters &amp; Virtualisation</p>
+              <p class="veille-log-desc">Nouvelles techniques pour réduire le PUE (Power Usage Effectiveness) des infrastructures. Étude comparative des approches de refroidissement et de consolidation serveurs.</p>
+            </div>
+            <div class="veille-log-relevance">
+              <span class="veille-relevance-bar"></span>
+              <span class="veille-relevance-label">Pertinence : Élevée</span>
+            </div>
+          </div>
+
+          <!-- Log Article 3 -->
+          <div class="veille-log-entry veille-log--purple fade-in">
+            <div class="veille-log-meta">
+              <span class="veille-log-date">2025-01-19 11:08:52</span>
+              <span class="veille-log-tag veille-tag--reseau">RÉSEAU-FRUGAL</span>
+            </div>
+            <div class="veille-log-content">
+              <p class="veille-log-title">Déploiement Low-Tech</p>
+              <p class="veille-log-desc">Création d'architectures réseaux résilientes et basse consommation pour les zones d'actions humanitaires. Protocoles adaptés aux contraintes d'énergie et de connexion limités.</p>
+            </div>
+            <div class="veille-log-relevance">
+              <span class="veille-relevance-bar"></span>
+              <span class="veille-relevance-label">Pertinence : Très élevée</span>
+            </div>
+          </div>
+
+          <!-- Curseur de fin de log -->
+          <div class="veille-cursor-line">
+            <span class="veille-prompt">yassine@veille:~$</span>
+            <span class="cursor">█</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <p>&copy; 2025 Yassine MENAD — Fait avec <span class="footer-heart">♥</span> et beaucoup de <span class="footer-code">&lt;code /&gt;</span></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
