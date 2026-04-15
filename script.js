@@ -540,14 +540,17 @@
    ───────────────────────────────────────────── */
 (function initProjectFilters() {
   const filterBtns = document.querySelectorAll('.proj-filter-btn');
-  const projCards  = document.querySelectorAll('.port-card');
+  const projCards  = document.querySelectorAll('#proj-grid .port-card');
   const countEl    = document.getElementById('proj-counter');
 
   if (!filterBtns.length) return;
 
+  // Init counter to total number of projects
+  if (countEl) countEl.textContent = projCards.length;
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Actif button
+      // Active button state
       filterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -555,27 +558,29 @@
       let visibleCount = 0;
 
       projCards.forEach(card => {
-        const categories = card.dataset.category.split(' ');
-        
+        const categories = card.dataset.category ? card.dataset.category.split(' ') : [];
+
         if (filterVal === 'all' || categories.includes(filterVal)) {
           card.classList.remove('hidden');
+          card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
           setTimeout(() => {
             card.style.opacity = '1';
             card.style.transform = 'translateY(0) scale(1)';
           }, 10);
           visibleCount++;
         } else {
+          card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
           card.style.opacity = '0';
-          card.style.transform = 'translateY(10px) scale(0.95)';
+          card.style.transform = 'translateY(10px) scale(0.97)';
           setTimeout(() => {
             if (!btn.classList.contains('active')) return;
             card.classList.add('hidden');
-          }, 400);
+          }, 350);
         }
       });
-      
-      // Update counter
-      countEl.textContent = visibleCount;
+
+      // Update counter in real-time
+      if (countEl) countEl.textContent = visibleCount;
     });
   });
 })();

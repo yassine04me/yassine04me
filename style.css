@@ -1252,8 +1252,13 @@ img { max-width: 100%; display: block; }
 
 .project-count {
   font-family: var(--font-mono);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 100px;
+  padding: 0.4rem 1rem;
+  letter-spacing: 0.04em;
 }
 .project-count span {
   color: var(--accent);
@@ -1278,63 +1283,115 @@ img { max-width: 100%; display: block; }
 @media (max-width: 1024px) { .port-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 768px) { .port-grid { grid-template-columns: 1fr; } }
 
-/* Cards */
+/* Cards — Glassmorphism */
 .port-card {
   display: flex;
   flex-direction: column;
-  background: rgba(15, 15, 15, 0.4);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.4s ease;
-  backdrop-filter: blur(8px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, opacity 0.4s ease;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
+.port-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-blue));
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.port-card:hover::before { opacity: 1; }
 .port-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  border-color: rgba(255,255,255,0.1);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.55), 0 0 0 1px rgba(0,255,140,0.08);
+  border-color: rgba(0, 255, 140, 0.15);
 }
 .port-card.hidden {
   display: none !important;
 }
 
-/* Image / Preview */
+/* ── Image / Placeholder zone ── */
 .port-img-box {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 160px;
   overflow: hidden;
-  background: #111;
 }
 
+/* Neon placeholder backgrounds by category */
 .port-placeholder {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-mono);
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  opacity: 0.4;
-  text-transform: uppercase;
+  gap: 0.6rem;
 }
-.bg-cpp { background: linear-gradient(135deg, #1e293b, #0f172a); color: var(--accent); }
-.bg-c { background: linear-gradient(135deg, #2d3748, #1a202c); color: var(--accent-blue); }
-.bg-db { background: linear-gradient(135deg, #3c366b, #2a2254); color: #c084fc; }
-.bg-pt { background: linear-gradient(135deg, #442a22, #2d1810); color: #ff8a65; }
 
-/* Badge bottom left */
+.proj-bg-secu {
+  background: linear-gradient(135deg, #110a14 0%, #1a0820 100%);
+}
+.proj-bg-secu .proj-neon-logo {
+  color: #ff3c80;
+  filter: drop-shadow(0 0 12px rgba(255, 60, 128, 0.7));
+}
+.proj-bg-secu .proj-neon-label { color: #ff3c80; text-shadow: 0 0 10px rgba(255,60,128,0.8); }
+
+.proj-bg-reseau {
+  background: linear-gradient(135deg, #050d1f 0%, #081424 100%);
+}
+.proj-bg-reseau .proj-neon-logo {
+  color: var(--accent-blue);
+  filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.7));
+}
+.proj-bg-reseau .proj-neon-label { color: var(--accent-blue); text-shadow: 0 0 10px rgba(0,212,255,0.8); }
+
+.proj-bg-systeme {
+  background: linear-gradient(135deg, #051209 0%, #081a0d 100%);
+}
+.proj-bg-systeme .proj-neon-logo {
+  color: var(--accent);
+  filter: drop-shadow(0 0 12px rgba(0, 255, 140, 0.7));
+}
+.proj-bg-systeme .proj-neon-label { color: var(--accent); text-shadow: 0 0 10px rgba(0,255,140,0.8); }
+
+.proj-bg-dev {
+  background: linear-gradient(135deg, #0e0a1f 0%, #130e2c 100%);
+}
+.proj-bg-dev .proj-neon-logo {
+  color: #c084fc;
+  filter: drop-shadow(0 0 12px rgba(192, 132, 252, 0.7));
+}
+.proj-bg-dev .proj-neon-label { color: #c084fc; text-shadow: 0 0 10px rgba(192,132,252,0.8); }
+
+/* SVG logo inside placeholder */
+.proj-neon-logo {
+  width: 52px; height: 52px;
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+.port-card:hover .proj-neon-logo {
+  transform: scale(1.1);
+}
+
+/* Text label (techno name) under SVG in placeholder */
+.proj-neon-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+/* Category badge (top right corner) */
 .port-badge {
   position: absolute;
-  bottom: 0.8rem;
-  left: 0.8rem;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(4px);
-  padding: 0.3rem 0.6rem;
-  border-radius: var(--radius-sm);
   font-family: var(--font-mono);
   font-size: 0.7rem;
   color: var(--text-primary);

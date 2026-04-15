@@ -452,142 +452,182 @@
       <div class="project-filter-bar fade-in">
         <div class="project-filters">
           <button class="proj-filter-btn active" data-filter="all">Tout</button>
-          <button class="proj-filter-btn" data-filter="c">C/C++</button>
-          <button class="proj-filter-btn" data-filter="mysql">MySQL</button>
+          <button class="proj-filter-btn" data-filter="systemes">Systèmes</button>
           <button class="proj-filter-btn" data-filter="reseau">Réseau</button>
-          <button class="proj-filter-btn" data-filter="infra">Infra</button>
+          <button class="proj-filter-btn" data-filter="securite">Sécurité</button>
+          <button class="proj-filter-btn" data-filter="developpement">Développement</button>
         </div>
-        <div class="project-count"><span id="proj-counter">5</span> projets affichés</div>
+        <div class="project-count">[ <span id="proj-counter">9</span> projets affichés ]</div>
       </div>
 
       <!-- Grille des projets -->
-      <div class="port-grid">
+      <div class="port-grid" id="proj-grid">
 
-        <!-- Project 1 — Saturne -->
-        <div class="port-card fade-in" data-category="c">
+        <!-- Projet 1 — Audit sécurité physique -->
+        <div class="port-card fade-in" data-category="securite">
           <div class="port-img-box">
-            <div class="port-placeholder bg-cpp"><span>C++</span></div>
-            <span class="port-badge">C++</span>
-            <div class="port-overlay">
-              <span>Survolez pour les détails</span>
-              <a href="https://github.com/yassine04me" target="_blank" rel="noopener noreferrer"
-                class="port-github-link">Voir le code →</a>
+            <div class="port-placeholder proj-bg-secu">
+              <svg class="proj-neon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                <path d="M12 2L4 6v6c0 5.25 3.5 10.15 8 11.35C16.5 22.15 20 17.25 20 12V6L12 2z"/>
+                <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="proj-neon-label">Windows</span>
             </div>
+            <span class="port-badge port-badge--secu">Sécurité</span>
           </div>
           <div class="port-content">
-            <h3>Génération d'image de Saturne</h3>
+            <h3>Audit de sécurité physique</h3>
             <div class="port-struct">
-              <p><strong>Problème :</strong> Comprendre la manipulation bas niveau de la mémoire image.</p>
-              <p><strong>Solution :</strong> Génération d'un bitmap pixel par pixel en RGBA avec rendu procédural.</p>
-              <p><strong>Résultat :</strong> Image réaliste de Saturne et ses anneaux générée sans bibliothèque
-                graphique.</p>
+              <p><strong>Problème :</strong> Identifier les failles de sécurité physique et logique d'un poste Windows en entreprise.</p>
+              <p><strong>Solution :</strong> Réalisation d'un audit complet (accès, ports, services, comptes).</p>
+              <p><strong>Résultat :</strong> Rapport d'audit structuré avec recommandations de remédiation.</p>
             </div>
             <div class="project-tags mt-auto">
-              <span class="tag-mini">C++</span>
-              <span class="tag-mini">Bitmap</span>
-              <span class="tag-mini">RGBA</span>
+              <span class="tag-mini">Windows</span>
+              <span class="tag-mini">Sécurité</span>
+              <span class="tag-mini">Audit</span>
             </div>
+            <a href="https://github.com/yassine04me/documents-it/blob/main/Audit_de_securite_physique.pdf" target="_blank" rel="noopener noreferrer" class="proj-btn-voir">Voir le projet →</a>
           </div>
         </div>
 
-        <!-- Project 2 — Graphes -->
-        <div class="port-card fade-in" data-category="c">
+        <!-- Projet 2 — Serveur DNS -->
+        <div class="port-card fade-in" data-category="reseau systemes">
           <div class="port-img-box">
-            <div class="port-placeholder bg-c"><span>C</span></div>
-            <span class="port-badge">C</span>
-            <div class="port-overlay">
-              <span>Survolez pour les détails</span>
-              <a href="https://github.com/yassine04me" target="_blank" rel="noopener noreferrer"
-                class="port-github-link">Voir le code →</a>
+            <div class="port-placeholder proj-bg-reseau">
+              <svg class="proj-neon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span class="proj-neon-label">DNS</span>
             </div>
+            <span class="port-badge port-badge--reseau">Réseau</span>
           </div>
           <div class="port-content">
-            <h3>Gestion de graphes</h3>
+            <h3>Serveur DNS Windows Server</h3>
             <div class="port-struct">
-              <p><strong>Problème :</strong> Résoudre l'ordonnancement de tâches avec dépendances.</p>
-              <p><strong>Solution :</strong> Implémentation d'un tri topologique sur graphe orienté.</p>
-              <p><strong>Résultat :</strong> Programme fonctionnel gérant des cas complexes de dépendances cycliques.
-              </p>
+              <p><strong>Problème :</strong> Mettre en place une résolution de noms interne pour un réseau d'entreprise.</p>
+              <p><strong>Solution :</strong> Installation et configuration d'un serveur DNS sous Windows Server avec zones de recherche directe et inverse.</p>
+              <p><strong>Résultat :</strong> Résolution de noms fonctionnelle et documentée.</p>
             </div>
             <div class="project-tags mt-auto">
-              <span class="tag-mini">C</span>
-              <span class="tag-mini">Algorithmes</span>
-              <span class="tag-mini">Structures de données</span>
+              <span class="tag-mini">DNS</span>
+              <span class="tag-mini">Windows Server</span>
+              <span class="tag-mini">Réseau</span>
             </div>
+            <a href="https://github.com/yassine04me/documents-it/blob/main/TP_DNS_YASSINE.pdf" target="_blank" rel="noopener noreferrer" class="proj-btn-voir">Voir le projet →</a>
           </div>
         </div>
 
-        <!-- Project 3 — Yams -->
-        <div class="port-card fade-in" data-category="c">
+        <!-- Projet 3 — Veeam PRA -->
+        <div class="port-card fade-in" data-category="securite systemes">
           <div class="port-img-box">
-            <div class="port-placeholder bg-c"><span>C</span></div>
-            <span class="port-badge">C</span>
-            <div class="port-overlay">
-              <span>Survolez pour les détails</span>
-              <a href="https://github.com/yassine04me" target="_blank" rel="noopener noreferrer"
-                class="port-github-link">Voir le code →</a>
+            <div class="port-placeholder proj-bg-secu">
+              <svg class="proj-neon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                <line x1="12" y1="22.08" x2="12" y2="12"/>
+              </svg>
+              <span class="proj-neon-label">Veeam</span>
             </div>
+            <span class="port-badge port-badge--secu">Sécurité</span>
           </div>
           <div class="port-content">
-            <h3>Jeu de Yams</h3>
+            <h3>Sauvegarde &amp; PRA (Veeam)</h3>
             <div class="port-struct">
-              <p><strong>Problème :</strong> Développer une logique de jeu complète en console.</p>
-              <p><strong>Solution :</strong> Gestion des lancers, combinaisons et score dans une architecture modulaire.
-              </p>
-              <p><strong>Résultat :</strong> Jeu jouable et extensible avec gestion des cas limites.</p>
+              <p><strong>Problème :</strong> Garantir la continuité d'activité en cas de panne ou sinistre.</p>
+              <p><strong>Solution :</strong> Mise en place d'un plan de reprise d'activité avec sauvegardes automatisées via Veeam Backup.</p>
+              <p><strong>Résultat :</strong> Procédure de PRA opérationnelle avec restauration testée.</p>
             </div>
             <div class="project-tags mt-auto">
-              <span class="tag-mini">C</span>
-              <span class="tag-mini">Logique</span>
-              <span class="tag-mini">Console</span>
+              <span class="tag-mini">Veeam</span>
+              <span class="tag-mini">PRA</span>
+              <span class="tag-mini">Sauvegarde</span>
             </div>
+            <a href="https://github.com/yassine04me/documents-it/blob/main/veeam_yassine.pdf" target="_blank" rel="noopener noreferrer" class="proj-btn-voir">Voir le projet →</a>
           </div>
         </div>
 
-        <!-- Project 4 — BDD -->
-        <div class="port-card fade-in" data-category="mysql">
+        <!-- Projet 4 — TrueNAS -->
+        <div class="port-card fade-in" data-category="systemes">
           <div class="port-img-box">
-            <div class="port-placeholder bg-db"><span>MySQL</span></div>
-            <span class="port-badge">MySQL</span>
-            <div class="port-overlay">
-              <span>Survolez pour les détails</span>
-              <a href="https://github.com/yassine04me" target="_blank" rel="noopener noreferrer"
-                class="port-github-link">Voir le code →</a>
+            <div class="port-placeholder proj-bg-systeme">
+              <svg class="proj-neon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+                <path d="M7 8h.01M7 12h.01"/>
+                <rect x="10" y="7" width="7" height="6" rx="1"/>
+              </svg>
+              <span class="proj-neon-label">TrueNAS</span>
             </div>
+            <span class="port-badge port-badge--systeme">Systèmes</span>
           </div>
           <div class="port-content">
-            <h3>Base de données Bibliothèque</h3>
+            <h3>Stockage NAS (TrueNAS)</h3>
             <div class="port-struct">
-              <p><strong>Problème :</strong> Modéliser et gérer un catalogue d'ouvrages avec emprunts.</p>
-              <p><strong>Solution :</strong> Conception MCD/MLD complète et requêtes SQL avancées.</p>
-              <p><strong>Résultat :</strong> Base de données normalisée avec gestion des emprunts et retours.</p>
+              <p><strong>Problème :</strong> Centraliser et sécuriser le stockage de fichiers d'une structure.</p>
+              <p><strong>Solution :</strong> Déploiement d'un serveur NAS sous TrueNAS avec gestion des partages et des droits.</p>
+              <p><strong>Résultat :</strong> Solution de stockage centralisée, accessible et redondante.</p>
             </div>
             <div class="project-tags mt-auto">
-              <span class="tag-mini">MySQL</span>
-              <span class="tag-mini">MCD</span>
-              <span class="tag-mini">MLD</span>
-              <span class="tag-mini">SQL</span>
+              <span class="tag-mini">TrueNAS</span>
+              <span class="tag-mini">NAS</span>
+              <span class="tag-mini">Stockage</span>
             </div>
+            <a href="https://github.com/yassine04me/documents-it/blob/main/Menad_Yassine_truenas.pdf" target="_blank" rel="noopener noreferrer" class="proj-btn-voir">Voir le projet →</a>
           </div>
         </div>
 
-        <!-- Project 5 — Maquette LAN/VLAN -->
-        <div class="port-card fade-in" data-category="reseau infra">
+        <!-- Projet 5 — Scripts Bash -->
+        <div class="port-card fade-in" data-category="systemes">
           <div class="port-img-box">
-            <div class="port-placeholder bg-pt"><span>Packet Tracer</span></div>
-            <span class="port-badge">Réseau</span>
-            <div class="port-overlay">
-              <span>Survolez pour les détails</span>
-              <a href="https://github.com/yassine04me/maquette-reseau" target="_blank" rel="noopener noreferrer"
-                class="port-github-link">Voir le code →</a>
+            <div class="port-placeholder proj-bg-systeme">
+              <svg class="proj-neon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+                <line x1="14" y1="4" x2="10" y2="20"/>
+              </svg>
+              <span class="proj-neon-label">Bash</span>
             </div>
+            <span class="port-badge port-badge--systeme">Systèmes</span>
           </div>
           <div class="port-content">
-            <h3>Maquette réseau LAN/VLAN</h3>
+            <h3>Boîte à outils Bash</h3>
             <div class="port-struct">
-              <p><strong>Problème :</strong> Segmenter un réseau d'entreprise et sécuriser les flux.</p>
-              <p><strong>Solution :</strong> Architecture avec VLANs, routage inter-VLAN et règles de filtrage firewall.
-              </p>
+              <p><strong>Problème :</strong> Automatiser des tâches d'administration système répétitives sous Linux.</p>
+              <p><strong>Solution :</strong> Développement d'un ensemble de scripts Bash (monitoring, gestion users, sauvegardes).</p>
+              <p><strong>Résultat :</strong> Gain de temps mesurable sur les tâches d'administration courantes.</p>
+            </div>
+            <div class="project-tags mt-auto">
+              <span class="tag-mini">Bash</span>
+              <span class="tag-mini">Linux</span>
+              <span class="tag-mini">Automatisation</span>
+            </div>
+            <a href="https://github.com/yassine04me/documents-it/blob/main/Compte_rendu_script.pdf" target="_blank" rel="noopener noreferrer" class="proj-btn-voir">Voir le projet →</a>
+          </div>
+        </div>
+
+        <!-- Projet 6 — Maquette LAN/VLAN Cisco -->
+        <div class="port-card fade-in" data-category="reseau">
+          <div class="port-img-box">
+            <div class="port-placeholder proj-bg-reseau">
+              <svg class="proj-neon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                <rect x="2" y="9" width="20" height="6" rx="1.5"/>
+                <circle cx="6" cy="12" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="10" cy="12" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="14" cy="12" r="1" fill="currentColor" stroke="none"/>
+                <circle cx="18" cy="12" r="1" fill="currentColor" stroke="none"/>
+                <path d="M6 9V6M12 9V6M18 9V6M6 15v3M12 15v3M18 15v3"/>
+              </svg>
+              <span class="proj-neon-label">Cisco</span>
+            </div>
+            <span class="port-badge port-badge--reseau">Réseau</span>
+          </div>
+          <div class="port-content">
+            <h3>Maquette réseau LAN/VLAN (Cisco)</h3>
+            <div class="port-struct">
+              <p><strong>Problème :</strong> Segmenter un réseau d'entreprise et sécuriser les flux entre services.</p>
+              <p><strong>Solution :</strong> Architecture avec VLANs, routage inter-VLAN et règles de filtrage firewall.</p>
               <p><strong>Résultat :</strong> Infrastructure simulée opérationnelle sous Cisco Packet Tracer.</p>
             </div>
             <div class="project-tags mt-auto">
@@ -596,6 +636,99 @@
               <span class="tag-mini">Cisco</span>
               <span class="tag-mini">Sécurité</span>
             </div>
+            <a href="https://github.com/yassine04me/documents-it/blob/main/CISCO%20TEST.docx" target="_blank" rel="noopener noreferrer" class="proj-btn-voir">Voir le projet →</a>
+          </div>
+        </div>
+
+        <!-- Projet 7 — Génération Saturne C++ -->
+        <div class="port-card fade-in" data-category="developpement">
+          <div class="port-img-box">
+            <div class="port-placeholder proj-bg-dev">
+              <svg class="proj-neon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"/>
+                <ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(-20 12 12)"/>
+              </svg>
+              <span class="proj-neon-label">C++</span>
+            </div>
+            <span class="port-badge port-badge--dev">Développement</span>
+          </div>
+          <div class="port-content">
+            <h3>Génération d'image de Saturne (C++)</h3>
+            <div class="port-struct">
+              <p><strong>Problème :</strong> Comprendre la manipulation bas niveau de la mémoire image.</p>
+              <p><strong>Solution :</strong> Génération d'un bitmap pixel par pixel en RGBA avec rendu procédural.</p>
+              <p><strong>Résultat :</strong> Image réaliste de Saturne et ses anneaux générée sans bibliothèque graphique.</p>
+            </div>
+            <div class="project-tags mt-auto">
+              <span class="tag-mini">C++</span>
+              <span class="tag-mini">Bitmap</span>
+              <span class="tag-mini">RGBA</span>
+            </div>
+            <a href="https://github.com/yassine04me/documents-it/blob/main/saturne.cpp" target="_blank" rel="noopener noreferrer" class="proj-btn-voir">Voir le projet →</a>
+          </div>
+        </div>
+
+        <!-- Projet 8 — Gestion de Graphes C -->
+        <div class="port-card fade-in" data-category="developpement">
+          <div class="port-img-box">
+            <div class="port-placeholder proj-bg-dev">
+              <svg class="proj-neon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                <circle cx="5" cy="12" r="2.5"/>
+                <circle cx="19" cy="5" r="2.5"/>
+                <circle cx="19" cy="19" r="2.5"/>
+                <line x1="7.5" y1="11" x2="16.5" y2="6.5"/>
+                <line x1="7.5" y1="13" x2="16.5" y2="17.5"/>
+                <line x1="19" y1="7.5" x2="19" y2="16.5"/>
+              </svg>
+              <span class="proj-neon-label">C</span>
+            </div>
+            <span class="port-badge port-badge--dev">Développement</span>
+          </div>
+          <div class="port-content">
+            <h3>Gestion de Graphes (C)</h3>
+            <div class="port-struct">
+              <p><strong>Problème :</strong> Résoudre l'ordonnancement de tâches avec dépendances.</p>
+              <p><strong>Solution :</strong> Implémentation d'un tri topologique sur graphe orienté.</p>
+              <p><strong>Résultat :</strong> Programme fonctionnel gérant des cas complexes de dépendances.</p>
+            </div>
+            <div class="project-tags mt-auto">
+              <span class="tag-mini">C</span>
+              <span class="tag-mini">Algorithmes</span>
+              <span class="tag-mini">Structures de données</span>
+            </div>
+            <a href="https://github.com/yassine04me/documents-it/blob/main/graphe.c" target="_blank" rel="noopener noreferrer" class="proj-btn-voir">Voir le projet →</a>
+          </div>
+        </div>
+
+        <!-- Projet 9 — Jeu du Yams C -->
+        <div class="port-card fade-in" data-category="developpement">
+          <div class="port-img-box">
+            <div class="port-placeholder proj-bg-dev">
+              <svg class="proj-neon-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="3"/>
+                <circle cx="8" cy="8" r="1.5" fill="currentColor" stroke="none"/>
+                <circle cx="16" cy="8" r="1.5" fill="currentColor" stroke="none"/>
+                <circle cx="8" cy="16" r="1.5" fill="currentColor" stroke="none"/>
+                <circle cx="16" cy="16" r="1.5" fill="currentColor" stroke="none"/>
+                <circle cx="12" cy="12" r="1.5" fill="currentColor" stroke="none"/>
+              </svg>
+              <span class="proj-neon-label">C</span>
+            </div>
+            <span class="port-badge port-badge--dev">Développement</span>
+          </div>
+          <div class="port-content">
+            <h3>Jeu du Yams (C)</h3>
+            <div class="port-struct">
+              <p><strong>Problème :</strong> Développer une logique de jeu complète en console.</p>
+              <p><strong>Solution :</strong> Gestion des lancers, combinaisons et score dans une architecture modulaire.</p>
+              <p><strong>Résultat :</strong> Jeu jouable et extensible avec gestion des cas limites.</p>
+            </div>
+            <div class="project-tags mt-auto">
+              <span class="tag-mini">C</span>
+              <span class="tag-mini">Logique</span>
+              <span class="tag-mini">Console</span>
+            </div>
+            <a href="https://github.com/yassine04me/documents-it/blob/main/yams.c" target="_blank" rel="noopener noreferrer" class="proj-btn-voir">Voir le projet →</a>
           </div>
         </div>
 
