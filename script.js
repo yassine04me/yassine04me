@@ -534,3 +534,48 @@
     });
   });
 })();
+
+/* ─────────────────────────────────────────────
+   8. FILTRES PROJETS PORTFOLIO
+   ───────────────────────────────────────────── */
+(function initProjectFilters() {
+  const filterBtns = document.querySelectorAll('.proj-filter-btn');
+  const projCards  = document.querySelectorAll('.port-card');
+  const countEl    = document.getElementById('proj-counter');
+
+  if (!filterBtns.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Actif button
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filterVal = btn.dataset.filter;
+      let visibleCount = 0;
+
+      projCards.forEach(card => {
+        const categories = card.dataset.category.split(' ');
+        
+        if (filterVal === 'all' || categories.includes(filterVal)) {
+          card.classList.remove('hidden');
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0) scale(1)';
+          }, 10);
+          visibleCount++;
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(10px) scale(0.95)';
+          setTimeout(() => {
+            if (!btn.classList.contains('active')) return;
+            card.classList.add('hidden');
+          }, 400);
+        }
+      });
+      
+      // Update counter
+      countEl.textContent = visibleCount;
+    });
+  });
+})();
